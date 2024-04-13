@@ -26,21 +26,31 @@ body {
 }
 
 .main {
-  width: 60%;
-}
-
-.course-img-box {
-  display: inline-block;
-  width: 80%;
-}
-.course-img-box img {
-  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .course-card {
   background-color: #fff;
-  padding: 3rem;
-  border-radius: 5px;
+  padding: 1rem;
+  border: 1px solid #000;
+  box-shadow: 5px 5px #000;
+  border-radius: 1rem;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.course-img-box {
+  display: inline-block;
+}
+.course-img-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
 }
 
 .course-preview {
@@ -60,4 +70,47 @@ body {
 
 .published {
   font-size: 1rem;
+}
+
+/* Styling the course card text */
+
+.course-name {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.course-name .course-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.course-name .course-text {
+  font-size: 1.2rem;
+  word-spacing: 0.5rem;
+  color: hsl(0, 0%, 50%);
+}
+
+.author {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.author .author-img {
+  width: 10%;
+}
+
+.author-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Adding the responsiveness */
+@media (max-width: 812px) {
+  .course-card {
+    width: 95%;
+  }
 }
